@@ -1,7 +1,7 @@
 
 const mysql = require("mysql")
 
-async function connectDB() {
+function connectDB() {
     const con = mysql.createConnection({
         host: process.env.HOST_NAME,
         user: process.env.USER_NAME,
@@ -23,12 +23,5 @@ async function connectDB() {
 }
 
 const con = connectDB()
-
-// const con = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: "",
-//     database: "julu"
-// })
 
 module.exports = con
